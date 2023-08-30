@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 int N,x1,y1,x2,y2;
-//¿é¤J
+//ï¿½ï¿½J
 cin>>N;
 cin>>x1>>y1>>x2>>y2;
 int t;
@@ -19,60 +19,60 @@ if(y2>y1){
     y2=t;
 }
 int squ[N*2-1][N*2-1];
-//¤W¼h&¤¤¼h
+//ï¿½Wï¿½h&ï¿½ï¿½ï¿½h
 for(int i=0;i<N;i++){
-    //«e¬q
+    //ï¿½eï¿½q
     for(int i_f=0;i_f<=i;i_f++){
         squ[i][i_f]=N-i_f;
-        squ=squ%100000;
+        squ[i][i_f]=squ[i][i_f]%100000;
         //cout<<"("<<i<<","<<i_f<<")"
         //cout<<squ[i][i_f]<<" ";
     }
-    //¤¤¬q
+    //ï¿½ï¿½ï¿½q
     if(i!=N-1){
         for(int i_m=i+1;i_m<(N*2-1)-i;i_m++){
             squ[i][i_m]=N-i;
-            squ=squ%100000;
+            squ[i][i_m]=squ[i][i_m]%100000;
             //cout<<"("<<i<<","<<i_m<<")"
             //cout<<squ[i][i_m]<<" ";
         }
 	}
-	//«á¬q
+	//ï¿½ï¿½q
     for(int i_l=N*2-1-i;i_l<N*2-1;i_l++){
         squ[i][i_l]=i_l+1-N+1;
-        squ=squ%100000;
+        squ[i][i_l]=squ[i][i_l]%100000;
         //cout<<"("<<i<<","<<i_l<<")"
         //cout<<squ[i][i_l]<<" ";
     }
     //cout<<endl;
 }
-//¤U¼h
+//ï¿½Uï¿½h
 for(int i=N;i<N*2-1;i++){
-    //«e¬q
+    //ï¿½eï¿½q
     for(int i_f=0;i_f<N*2-1-i;i_f++){
         squ[i][i_f]=N-i_f;
-        squ=squ%100000;
+        squ[i][i_f]=squ[i][i_f]%100000;
         //cout<<"("<<i<<","<<i_f<<")"
         //cout<<squ[i][i_f]<<" ";
     }
-    //¤¤¬q
+    //ï¿½ï¿½ï¿½q
     for(int i_m=N*2-1-i;i_m<i+1;i_m++){
         squ[i][i_m]=i-N+2;
-        squ=squ%100000;
+        squ[i][i_m]=squ[i][i_m]%100000;
         //cout<<"("<<i<<","<<i_m<<")"
         //cout<<squ[i][i_m]<<" ";
 	}
-	//«á¬q
+	//ï¿½ï¿½q
     for(int i_l=i+1;i_l<N*2-1;i_l++){
         squ[i][i_l]=i_l-N+2;
-        squ=squ%100000;
+        squ[i][i_l]=squ[i][i_l]%100000;
         //cout<<"("<<i<<","<<i_l<<")"
         //cout<<squ[i][i_l]<<" ";
     }
     //cout<<endl;
 }
 //cout<<endl;
-/*//¦C¦L½T»{
+/*//ï¿½Cï¿½Lï¿½Tï¿½{
 for(int i=0;i<N*2-1;i++){
     for(int j=0;j<N*2-1;j++){
         //cout<<"("<<i<<","<<j<<")"
@@ -80,7 +80,7 @@ for(int i=0;i<N*2-1;i++){
     }
     //cout<<endl;
 }*/
-//°é¿ï
+//ï¿½ï¿½ï¿½
 int sum=0;
 //cout<<"("<<x1<<","<<y1<<") ("<<x2<<","<<y2<<")";
 //cout<<"["<<squ[N*2-1-y1][x1-1]<<","<<squ[N*2-1-y2][x2-1]<<"]"<<endl;
